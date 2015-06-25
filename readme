@@ -1,0 +1,4 @@
+今天主要干的活就是实现了不借助DNS实现对主机ip的解析 
+需要用到unp.h这个库 （需要包含libunp库 以及同时需要apueerror.h 防止出现err_sys的系统错误）
+最主要的就是sock_ntop函数的使用  
+sock_ntop和getnameinfo的差别在于，前者不涉及DNS，直接返回可输出的IP地址和端口号，后者通常试图给主机和服务的名字。
