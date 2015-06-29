@@ -1,6 +1,0 @@
-今天主要干的活就是实现了不借助DNS实现对主机ip的解析 
-需要用到unp.h这个库 （需要包含libunp库 以及同时需要apueerror.h 防止出现err_sys的系统错误）
-最主要的就是sock_ntop函数的使用  
-sock_ntop和getnameinfo的差别在于，前者不涉及DNS，直接返回可输出的IP地址和端口号，后者通常试图给主机和服务的名字。
-函数getifaddrs（int getifaddrs (struct ifaddrs **__ifap)）获取本地网络接口信息，将之存储于链表中，链表头结点指针存储于__ifap中带回，函数执行成功返回0，失败返回-1，且为errno赋值。
-很显然，函数getifaddrs用于获取本机接口信息，比如最典型的获取本机IP地址。
